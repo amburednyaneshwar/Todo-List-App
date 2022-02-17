@@ -51,7 +51,7 @@ setTask(newitems)
 {task.map((nvalue,ind)=>{
     return <div className="items" key={ind}> 
        <p >{nvalue}
-       <i class="fas fa-trash" onClick={()=>Deletetodo(ind)}> </i>
+      <i className="far fa-trash-alt add-btn" title="Delete Item" onClick={()=>Deletetodo(ind)}> </i>
       </p>
       </div>
     
