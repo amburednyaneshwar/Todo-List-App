@@ -74,7 +74,7 @@ h3{
    right: 10px;
    cursor: pointer;
 }
-@media screen and (min-width:390px){
+@media screen and (max-width:390px){
     .tasks{
 
         background-color: rgb(57, 155, 201);
