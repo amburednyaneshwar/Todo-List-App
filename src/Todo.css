@@ -76,7 +76,7 @@ h3{
    right: 10px;
    cursor: pointer;
 }
-@media screen and (max-width:390px){
+@media screen and (min-width:390px){
     .tasks{
 
         background-color: rgb(57, 155, 201);
@@ -95,7 +95,7 @@ h3{
         border: 1px solid rgb(0, 92, 128);
     }
     input[type="text"]{
-        width: 350px;
+        width: 300px;
         padding-left: 20px;
     }
     button{
@@ -103,6 +103,8 @@ h3{
     }
     .items{
         margin-left: 11px;
+        width: 320px;
+        font-size: 17px;
     }
     
 }
