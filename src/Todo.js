@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import './Todo.css';
-
- 
 const Name=()=>{
     return(
       <div>
@@ -51,16 +49,14 @@ setTask(newitems)
 {task.map((nvalue,ind)=>{
     return <div className="items" key={ind}> 
        <p >{nvalue}
-      <i className="far fa-trash-alt add-btn" title="Delete Item" onClick={()=>Deletetodo(ind)}> </i>
+       <i class="fa fa-trash-o" onClick={()=>Deletetodo(ind)} ></i>
       </p>
       </div>
     
 })}
 </div> 
-
 </div>
 </div>
-
 </div>      
       )
   }
@@ -69,9 +65,7 @@ setTask(newitems)
       return(
           <div>
               <Name></Name>
-          
               <List></List>
-
           </div>
       )
   }
