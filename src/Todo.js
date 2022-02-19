@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Todo.css';
+import FlipMove from "react-flip-move";
 const Name=()=>{
     return(
       <div>
@@ -46,14 +47,17 @@ setTask(newitems)
 <div className="data">
     
   <div>
+    <FlipMove duration={300} easing="ease-in-out">
 {task.map((nvalue,ind)=>{
     return <div className="items" key={ind}> 
        <p >{nvalue}
        <i class="fa fa-trash-o" onClick={()=>Deletetodo(ind)} ></i>
       </p>
+      
       </div>
     
 })}
+</FlipMove>
 </div> 
 </div>
 </div>

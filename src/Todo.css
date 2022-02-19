@@ -21,7 +21,7 @@ input[type="text"]{
    border-radius: 10px;
    font-size: 18px;
    border: 1px solid rgb(14, 79, 153);
-   background-color: rgb(221, 174, 217);
+   background-color: #e9a8e9;
    padding-left: 25px;
 }
 button{
@@ -37,7 +37,7 @@ button{
 }
 .tasks{
 
-    background-color: rgb(230, 228, 163);
+    background-color:rgba(255, 255, 255, 0.794);
     height: 1000px;
     width: 1000px;;
     border-right: 1px solid rgb(13, 107, 150);
