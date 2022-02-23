@@ -1,25 +1,63 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import FlipMove from "react-flip-move";
+const Name=()=>{
+    return(
+      <div>
+    <div className='Name'>
+    <h1>My To-do List</h1>
     </div>
-  );
-}
+    </div>
+    )
+  }
 
-export default App;
+  const List=()=>{
+    const [search,setSearch]=useState("")
+const [task, setTask]=useState([])
+
+ const handlesearch=(event)=>{
+       setSearch(event.target.value)
+ }
+ const handlesubmit=(e)=>{
+     e.preventDefault()
+     setTask((oldtask)=>{
+      return  [...oldtask,search];
+    })
+    setSearch("")
+ }
+ const Deletetodo=(value)=>{
+const newitems=task.filter((elem, ind)=>{
+return ind!==value;
+})
+setTask(newitems)
+}
+      return(
+          <div>
+           
+<form className="tasks">
+    <br/>
+    <input type="text" placeholder="Add a task..." onChange={handlesearch} value={search}></input> 
+    <button  onClick={handlesubmit}>Add</button>
+ 
+    <FlipMove duration={300} easing="ease-in-out">
+{task.map((nvalue,ind)=>{
+    return <div className="items" key={ind}>
+       <p >{nvalue}
+       <i class="fa fa-trash-o" onClick={()=>Deletetodo(ind)} ></i>
+      </p>     
+      </div>  
+})}
+</FlipMove>
+</form> 
+</div>     
+)}
+
+  const Todo=()=>{
+      return(
+          <div>
+              <Name></Name>
+              <List></List>
+          </div>
+      )
+  }
+  export default Todo;
