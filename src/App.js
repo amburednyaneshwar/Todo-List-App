@@ -11,11 +11,10 @@ const Name=()=>{
     )
   }
 
-  const List=()=>{
+const List=()=>{
     const [search,setSearch]=useState("")
-const [task, setTask]=useState([])
-
- const handlesearch=(event)=>{
+    const [task, setTask]=useState([])
+    const handlesearch=(event)=>{
        setSearch(event.target.value)
  }
  const handlesubmit=(e)=>{
@@ -25,23 +24,21 @@ const [task, setTask]=useState([])
     })
     setSearch("")
  }
- const Deletetodo=(value)=>{
+const Deletetodo=(value)=>{
 const newitems=task.filter((elem, ind)=>{
 return ind!==value;
 })
-setTask(newitems)
+setTask(newitems);
 }
-      return(
-          <div>
-           
+return(
+<div>         
 <form className="tasks">
-    <br/>
-    <input type="text" placeholder="Add a task..." onChange={handlesearch} value={search}></input> 
-    <button  onClick={handlesubmit}>Add</button>
- 
-    <FlipMove duration={300} easing="ease-in-out">
-{task.map((nvalue,ind)=>{
-    return <div className="items" key={ind}>
+ <br/>
+ <input type="text" placeholder="Add a task..." onChange={handlesearch} value={search}></input> 
+ <button  onClick={handlesubmit}>Add</button>
+ <FlipMove duration={300} easing="ease-in-out">
+    {task.map((nvalue,ind)=>{
+      return <div className="items" key={ind}>
        <p >{nvalue}
        <i class="fa fa-trash-o" onClick={()=>Deletetodo(ind)} ></i>
       </p>     
@@ -52,7 +49,7 @@ setTask(newitems)
 </div>     
 )}
 
-  const Todo=()=>{
+const Todo=()=>{
       return(
           <div>
               <Name></Name>

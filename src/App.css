@@ -1,8 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: rgb(141, 211, 202);
-   
+  background-color: rgb(141, 211, 202);  
 }
 .Name{
   background-color:rgba(8, 24, 54, 0.904);
@@ -13,21 +12,19 @@ body{
   display: inline-block;
   border-bottom: 1px solid rgb(8, 55, 109);
 }
- 
-
 input[type="text"]{
  width: 300px;
  height: 40px;
  border-radius: 10px;
  font-size: 18px;
- margin-left: 50px;
+ margin-left: 30px;
  border: 1px solid rgb(8, 55, 109);
  background-color: rgb(141, 211, 202);
  padding-left: 25px;
 }
 button{
   width: 80px;
-  height: 40px;
+  height: 39px;
   color: white;
   font-size: 21px;
   margin-left: 20px;
@@ -37,39 +34,34 @@ button{
   cursor: pointer;  
 }
 .tasks{
-
   background-color:rgba(182, 180, 47, 0.877);
   min-height:600px;
-  width: 520px;
+  width: 480px;
   margin: 30px auto;
-  
+  border-radius: 10px; 
 }
-
-
 .items{
   color: rgb(189, 181, 75);
-  width: 350px;
+  width: 370px;
   height: 42px;
   background-color: rgba(8, 24, 54, 0.904);
   border-radius: 10px;
-  margin-left: 80px;
+  margin-left: 48px;
   padding-left: 15px;
   font-size: 21px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
 .items p{
   padding: 10px;
-  position: relative;
-  
+  position: relative; 
 }
 .items p i{
   position: absolute;
- right: 10px;
- cursor: pointer;
+  right: 10px;
+  cursor: pointer;
 }
 @media screen and (max-width:390px){
-  input[type="text"]{
+ input[type="text"]{
  width: 200px;
  height: 30px;
  border-radius: 10px;
@@ -92,26 +84,20 @@ button{
   cursor: pointer;  
 }
 .tasks{
-
   background-color:rgba(182, 180, 47, 0.877);
   min-height:480px;
   width: 320px;
-  margin: 23px auto;
-  
+  margin: 23px auto;  
 }
-
-
 .items{
   color: rgb(189, 181, 75);
-  width: 200px;
+  width: 250px;
   height: 35px;
   background-color: rgba(8, 24, 54, 0.904);
   border-radius: 10px;
-  margin-left: 50px;
+  margin-left: 30px;
   padding-left: 12px;
   font-size: 17px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
-  
+} 
 }
